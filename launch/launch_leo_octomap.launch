@@ -1,0 +1,5 @@
+<launch>
+    <node pkg="octomap_server" type="octomap_server_node" name="octomap_server" args="$(find leonardo_field_description)/octo_script/leonardo_512_res.bt">			
+		<param name="frame_id" type="string" value="world" />		        
+	</node>
+</launch>
