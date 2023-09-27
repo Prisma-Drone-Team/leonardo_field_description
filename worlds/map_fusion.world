@@ -1,0 +1,125 @@
+<?xml version="1.0" ?>
+<sdf version="1.5">
+  <world name="leonardo_race_field">
+    <!--
+    <shadows>0</shadows>
+		<scene>
+			<ambient>0.0 0.0 0.0 1.0</ambient>
+			<shadows>0</shadows>
+		</scene>
+    -->
+        <!-- A ground plane -->
+    <include>
+      <uri>model://ground_plane</uri>
+    </include>
+   <!-- <include>
+      <uri>model://asphalt_plane</uri>
+    </include> -->
+    <physics name='default_physics' default='0' type='ode'>
+      <gravity>0 0 -9.8066</gravity>
+      <ode>
+        <solver>
+          <type>quick</type>
+          <iters>150</iters>
+          <sor>1.4</sor>
+          <precon_iters>0</precon_iters>
+          <use_dynamic_moi_rescaling>1</use_dynamic_moi_rescaling>
+        </solver>
+        <constraints>
+          <cfm>0.0</cfm>
+          <erp>0.2</erp>
+          <contact_max_correcting_vel>2000.000000</contact_max_correcting_vel>
+          <contact_surface_layer>0.01</contact_surface_layer>
+        </constraints>
+      </ode>
+      <max_step_size>0.001</max_step_size>
+      <real_time_factor>1</real_time_factor>
+      <real_time_update_rate>1000</real_time_update_rate>
+      <magnetic_field>6.0e-6 2.3e-5 -4.2e-5</magnetic_field>
+    </physics>
+
+    <!--include>
+      <uri>model://ground_plane</uri>
+    </include-->
+    <include>
+      <uri>model://sun</uri>
+    </include>
+    
+    <!-- Race field 
+    <include>
+      <name>race_field</name>
+      <pose> 0 10 0.1 0 0 3.14159 </pose>
+      <uri>model://race_field</uri>
+    </include>-->
+    
+    <!-- Roof -->
+     <include>
+      <name>roof</name>
+      <pose> 0 -5.0 0.0 0.0 0 0.0 </pose>
+      <uri>model://roof</uri>
+    </include>
+
+    <!-- Static Obstacles-->
+    <include>
+      <name>obstacle_03</name>
+      <pose> 12.8 1.5 0.0 0 0 -1.57 </pose>
+      <uri>model://obstacle_03</uri>
+    </include>
+
+    <include>
+      <name>obstacle_03_second</name>
+      <pose> 15.0 -1.5 0.0 0 0 1.57 </pose>
+      <uri>model://obstacle_03</uri>
+    </include>
+
+    <include>
+      <name>obstacle_09</name>
+      <pose> 12.5 -5.0 0.0 0.0 0.0 0.0</pose>
+      <uri>model://obstacle_09</uri>
+    </include>
+
+    <include>
+      <name>obstacle_06</name>
+      <pose> 19 -1.8 0.1 0 0 3.14</pose>
+      <uri>model://obstacle_06</uri>
+    </include>
+
+    <include>
+      <name>obstacle_10_</name>
+      <pose> 16.2 3.8 0.0 0.0 0.0 0.0</pose>
+      <uri>model://obstacle_10_</uri>
+    </include>
+
+    <!-- Unknown Obstacles-->
+    <include>
+      <name>unknown_obst_1</name> <!--high tower-->
+      <pose> 7.5 0.5 0.1 0 0 0</pose>
+      <uri>model://unknown_obst_1</uri>
+    </include>
+
+    <include>
+      <name>unknown_obst_2</name> 
+      <pose> 8.5 0.5 0.1 0 0 0</pose>
+      <uri>model://unknown_obst_2</uri>
+    </include> 
+
+    <include>
+      <name>unknown_obst_3 </name> 
+      <pose> 3 -0.5 0.1 0 0 0</pose>
+      <uri>model://unknown_obst_3</uri>
+    </include> 
+	<!-- Start pod for rover 
+    <include>
+      <name>start_pod_drone </name> 
+      <pose> -19.9 1.5 0.1 0 0 0 </pose>
+      <uri>model://start_pod</uri>
+    </include>    -->
+    	<!-- Start pod for rover -->
+    <include>
+      <name>start_pod_rover </name> 
+      <pose> 0.5 1.5 0.1 0 0 0 </pose>
+      <uri>model://start_pod</uri>
+    </include>  
+  
+  </world>
+</sdf>
