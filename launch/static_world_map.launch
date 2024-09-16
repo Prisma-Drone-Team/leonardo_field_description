@@ -1,3 +1,0 @@
-<launch>
-    <node pkg="tf" type="static_transform_publisher" name="base_link_to_camera_tf" args="0 0 0.0 1.57 0 0 /map /foo 10" />
-</launch>

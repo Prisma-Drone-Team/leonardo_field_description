@@ -29,8 +29,8 @@
             </mesh>
         </geometry>
         <material> <!-- color white -->
-          <ambient>231 245 243 1</ambient>
-          <diffuse>231 245 243 1</diffuse>
+          <ambient>0.9059 0.9608 0.9529 1</ambient>
+          <diffuse>0.9059 0.9608 0.9529 1</diffuse>
           <specular>0 0 0 0</specular>
           <emissive>0 0 0 1</emissive>
         </material> 
