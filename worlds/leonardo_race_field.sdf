@@ -1,7 +1,11 @@
 <?xml version="1.0" ?>
 <sdf version="1.5">
   <world name="leonardo_race_field">
-    
+      <!-- <plugin 
+    filename="libgz-sim-clock-publisher-system.so"
+    name="gz::sim::systems::ClockPublisher">
+    <publish_frequency>100</publish_frequency>  
+  </plugin> -->
     <physics name='default_physics' default='0' type='ode'>
       <gravity>0 0 -9.8066</gravity>
       <ode>
